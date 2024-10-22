@@ -1,0 +1,49 @@
+docker commands
+containers life cycle
+
+docker start containerid (it doesn't shows output coming out from those containers)
+
+docker start -a containerid (shows output coming out from those containers)
+
+docker create busybox echo hello and welcome
+
+docker start containerid..
+docker logs containerid
+
+
+
+-------
+
+multi command containers..
+
+docker run redis
+
+open new terminal and type  redis-cli (and u will find command not found)
+
+docker ps
+
+docker exec -it f51149f59691 redis-cli
+
+set myvalue 5
+get mayvalue
+
+without -it container it wont take any input under this terminal
+
+without using docker exec we can go inside the docker container and get the details.
+
+docker ps
+docker exec -it containerid sh
+i can run the commands..
+cd ~/
+ls
+cd /
+ls
+echo hi there
+redis-cli
+
+-------
+
+
+docker images.
+once we create the image with redis and if we create the image again using docker build .
+it uses the cache.
